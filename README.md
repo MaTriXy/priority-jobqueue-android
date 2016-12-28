@@ -3,7 +3,7 @@ There is a major internal rewrite of this project for more stability and new fea
 
 ``` gradle
 dependencies {
-    compile 'com.birbit:android-priority-jobqueue:2.0.0'
+    compile 'com.birbit:android-priority-jobqueue:2.0.1'
 }
 ```
 
@@ -159,7 +159,7 @@ At Path, we use [greenrobot's EventBus](https://github.com/greenrobot/EventBus);
 ### Getting Started
 We distribute artifacts through maven central repository.
 
-Gradle: `compile 'com.birbit:android-priority-jobqueue:2.0.0'`
+Gradle: `compile 'com.birbit:android-priority-jobqueue:2.0.1'`
 
 Maven:
 
@@ -167,7 +167,7 @@ Maven:
 <dependency>
     <groupId>com.birbit</groupId>
     <artifactId>android-priority-jobqueue</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 </dependency>
 ```
 
@@ -180,6 +180,9 @@ We highly recommend checking how you can configure job manager and individual jo
 * [Review sample configuration][7]
 
 ### Version History
+  - 2.0.1 (Oct 11, 2016)
+   - Fixed high CPU usage if queues are full (#262)
+   - Handle bad input from job schedulers (#254)
   - 2.0.0 (Aug 14, 2016)
    - Validate JobManager ids
   - 2.0.0-beta3 (Aug 7, 2016)
@@ -242,9 +245,9 @@ We highly recommend checking how you can configure job manager and individual jo
 ### Dependencies
 - Job Queue
 - - [Support-v4](https://developer.android.com/topic/libraries/support-library/index.html)
-- - [OkiIO](https://github.com/square/okio) ([license](https://github.com/square/okio/blob/master/LICENSE.txt))
+- - [Okio](https://github.com/square/okio) ([license](https://github.com/square/okio/blob/master/LICENSE.txt))
 - For testing, we use:
-- - [Junit 4](http://junit.org/) ([license](https://github.com/junit-team/junit/blob/master/LICENSE.txt))
+- - [Junit 4](http://junit.org/) ([license](https://github.com/junit-team/junit4/blob/master/LICENSE-junit.txt))
 - - [Robolectric](http://robolectric.org/) ([license](https://github.com/robolectric/robolectric/blob/master/LICENSE.txt))
 - - [Fest Util](http://easytesting.org/) ([license](http://www.apache.org/licenses/LICENSE-2.0))
 - - [Hamcrest](https://code.google.com/p/hamcrest/) ([license](http://opensource.org/licenses/BSD-3-Clause))
