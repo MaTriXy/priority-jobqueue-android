@@ -1,3 +1,15 @@
+# This Project is Deprecated!
+
+Thanks to everybody who've used Android Priority JobQueue.
+It was designed in a world where there was no JobScheduler, RxJava was not popular and Kotlin wasn't even born publicly.
+
+Today, most of the learnings in this project are part of WorkManager, the official deferred task library for Android. I've been involved in its development and I think it is the right way to do deferred tasks on Android.
+
+For your persistent jobs, I recommend using WorkManager.
+For your non-persistent jobs, drink the kool aid and use Coroutines.
+
+Thanks.
+
 ### V2 is here!
 There is a major internal rewrite of this project for more stability and new features. If you were using v1, see the migration guide here: [migration from v1 to v2](https://github.com/yigit/android-priority-jobqueue/wiki/V1-to-V2-migration)
 
@@ -159,8 +171,20 @@ At Path, we use [greenrobot's EventBus](https://github.com/greenrobot/EventBus);
 ### Getting Started
 We distribute artifacts through maven central repository.
 
-Gradle: `compile 'com.birbit:android-priority-jobqueue:2.0.1'`
+### AndroidX Version
+Gradle: `compile 'com.birbit:android-priority-jobqueue:3.0.0'`
+Maven:
 
+``` xml
+<dependency>
+    <groupId>com.birbit</groupId>
+    <artifactId>android-priority-jobqueue</artifactId>
+    <version>3.0.0</version>
+</dependency>
+```
+
+#### Android Support Version
+Gradle: `compile 'com.birbit:android-priority-jobqueue:2.0.1'`
 Maven:
 
 ``` xml
@@ -180,6 +204,8 @@ We highly recommend checking how you can configure job manager and individual jo
 * [Review sample configuration][7]
 
 ### Version History
+  - 3.0.0 (Jan 20, 2020)
+   - Updated to AndroidX dependencies
   - 2.0.1 (Oct 11, 2016)
    - Fixed high CPU usage if queues are full (#262)
    - Handle bad input from job schedulers (#254)
